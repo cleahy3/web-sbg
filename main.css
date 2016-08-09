@@ -1,0 +1,77 @@
+body{
+	margin:0;
+font-size: 100%;
+padding:0;
+
+}
+.redstripe{
+	color:#bd0831;
+	background-color: #bd0831;
+	font-size: 43.3px;
+	margin: 0px;
+	display: block;
+	max-width:100%;
+}
+.whitestripe{
+	color:white;
+	background-color: white;
+	font-size: 43.3px;
+	margin: 0px;
+	display:block;
+	max-width:100%;
+}
+@media only screen and (max-width: 320px) {
+
+   body { font-size: 40px; }
+
+}
+.stars { 
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	color :white;
+	letter-spacing: 8px;
+	background-color: #042b6c; 
+	font-size: 80px
+	width:37%;
+	height:50%;
+	position: absolute;}
+.starrow{
+	display:block;
+	font-size: 100%
+}
+.triangle-down {
+	margin: 10px;
+	width: 0;
+	height: 0;
+	border-left: 8em solid transparent;
+	border-right: 8em solid transparent;
+	border-top: 80px solid #042b6c;
+}
+.triangle-up {
+	margin:10px;
+	width: 0;
+	height: 0;
+	border-left: 8em solid transparent;
+	border-right: 8em solid transparent;
+	border-bottom: 80px solid #042b6c;
+}
+.triangle-left {
+	width: 10em;
+	height: 0;
+	border-top: 6em solid transparent;
+	border-right: 80px solid #042b6c;
+	border-bottom: 6em solid transparent;
+	padding: 0;
+}
+.jack { 
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	color :white;
+	letter-spacing: 8px;
+	background-color: #fff; 
+	font-size: 40px;
+	width:11em;
+	height:8.58em;
+	position: absolute;}
