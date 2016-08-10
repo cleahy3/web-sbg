@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+<head >
 <meta  charset = "UTF-8">
 <title> Callum Leahy - CV </title>
 
 </head>
 
 	<body>
-		<header id="cust-header">
+		<header role="introduction" id="cust-header">
 		<h1>Callum Leahy</h1> 
-	 
+	 	<script>
+	 		confirm("This is my CV");
+	 	</script>
  
 	 
  
-			<h2>PERSONAL PARTICULARS  </h2>
+			<h2 aria-label="Personal information">PERSONAL PARTICULARS  </h2>
 	 
-			<ul style="list-style: none;"> 
+			<ul role="main" style="list-style: none;"> 
 				<li>Name Callum Leahy </li> 
 				<li>Address 37 New Street  </li>
 				<li> Wakefield WF4 6nb </li>	
@@ -24,33 +26,33 @@
 				<li>Email C.Leahy8892@student.leedsbeckett.ac.uk </li> 
  				<li>Date of Birth 08/12/1992 </li>
  			</ul>
-			<h2>CAREER GOALS </h2>
+			<h2 role="main">CAREER GOALS </h2>
 		</header> 
-		<p>My aspiration is to develop a career as a software engineer. I enjoy creating all kind of applications as I’m very passionate about problem	 solving and also  Pexpanding my knowledge of software development techniques. Long term career goals are to become an established & industry	 respected software engineer. Possibly gaining a masters degree classification after some years of experience. </p	>
+		<p role="complimentary">My aspiration is to develop a career as a software engineer. I enjoy creating all kind of applications as I’m very passionate about problem	 solving and also  Pexpanding my knowledge of software development techniques. Long term career goals are to become an established & industry	 respected software engineer. Possibly gaining a masters degree classification after some years of experience. </p	>
 	 
 	 
 	 
-		<h2>EDUCATION BACKGROUND </h2>
+		<h2 aria-label="Education Background" role="main">EDUCATION BACKGROUND </h2>
 		<ul>
 			<li>
-				<h4>Sep 2013 – 2016 First Class with Honours of BSC 
+				<h3 role="main">Sep 2013 – 2016 First Class with Honours of BSC 
 				COMPUTING FT, Leeds Beckett University</h4> 
 			</li>
  		
 			<li>Specialisations 
-		<ul>
+		<ul role ="main">
 				<li>Advanced Software Engineering </li>
 				<li>Advanced Internet Development </li>
 		</ul>	
 		</li>
-		<li>Key Subjects 
+		<li role = "main">Key Subjects 
 			<ul>
 				<li>Database Aided Design </li>
 				<li>Software Development </li>
 				<li>Internet Systems Development </li>
 			</ul>
 		</li>
-		<li>Key Skills Developed 
+		<li role = "complementary">Key Skills Developed 
 				<ul>
 					<li>Java </li>
 					<li>HTML & CSS </li>
@@ -62,7 +64,7 @@
 		</li>
 	</ul>
  
-	<p>In addition to the languages and skills I have studied, while working on both solo as well as group projects; I believe I have developed a number of transferrable soft skills which will help me to become a successful addition to any team, hopefully your team. </p>
+	<p role="complementary">In addition to the languages and skills I have studied, while working on both solo as well as group projects; I believe I have developed a number of transferrable soft skills which will help me to become a successful addition to any team, hopefully your team. </p>
  
  
  
@@ -71,7 +73,7 @@
  
  
  
-		<h2>EMPLOYMENT HISTORY </h2>
+		<h2 aria-label="Employment Background">EMPLOYMENT HISTORY </h2>
  
 		<h3>Sky Betting & Gaming – Graduate Tech Engineer August 2016 – Current </h3>
  
@@ -97,23 +99,17 @@
 		I also enjoy paintballing. It’s exciting, physically demanding and similar to rugby in its competitive team approach; tests team work and strategy in a very different manner. </p>
  
  
-		<h2 >REFEREES </h2>  
+		<h2  >REFEREES </h2>  
  
 		<strong> Quality references supplied upon request </strong>
-		<section id="form">
-			<form method="POST" action="http://lacedeamon.spartaglobal.com/contactform">
+		<section role="contact" id="form">
+			<form role="main" alt="contactform" method="POST" action="http://lacedeamon.spartaglobal.com/contactform">
 				<legend>
-					<input name="name" id="name" type="text"/><label> Name </br></label>
-					<input name="email" id="email" type="email"/><label> Email </br></label>
-					<input name="addressee" id="addressee" type="text"/><label> Addressee </br></label>
-					<input name="message" id="message" type="text"/><label> message </br></label>
-					<input type="text"/><label> message </br></label>
-					<select >
-						<option value="choice 1">Choice 1</option>
-						<option value="choice 2">Choice 2</option>
-					</select>
-					<input type="range" min="1" max="20" step="1"/>
-					<input type="submit"/><label></label>
+					<label for = "name"> Name </br></label><input name="name" id="name" type="text"/></br>
+					<label for="email"> Email </br></label><input name="email" id="email" type="email"/></br>
+					<label for="addressee"> Addressee </br></label><input name="addressee" id="addressee" type="text"/></br>
+					<label for ="message"> message </br></label><input name="message" id="message" type="text"/></br>
+					<input value ="submit" type="submit"/>
 				</legend>
 			</form>
 		</section>
