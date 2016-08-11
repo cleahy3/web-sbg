@@ -14,6 +14,7 @@ body{
 	color:#f2fffe;
 	text-align:center;
 	background-image: url("../bg.jpeg");
+	background-size:cover;
 }
 
 #icon{
@@ -27,7 +28,9 @@ body{
     text-align: center;
 
 }
-
+#image-text{
+	max-width: 90%;
+}
 .dropdown {
     position: relative;
     display: inline-block;
@@ -140,6 +143,7 @@ img{
 }
 #decline:hover{
     color: red;
+    font-size: 60px;
 }
 
 #decline:hover .decline-content {
@@ -198,8 +202,8 @@ img{
 
     }
     #image-text{
-    	text-align: left;
-    	padding-left:0.5em;
+    	
+    	padding-left:2em;
     }
 }
 @media screen and (min-width: 960px) {

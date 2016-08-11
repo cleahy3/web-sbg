@@ -3,7 +3,8 @@ body {
   font-size: 12px;
   color: #f2fffe;
   text-align: center;
-  background-image: url("../bg.jpeg"); }
+  background-image: url("../bg.jpeg");
+  background-size: cover; }
 
 #icon {
   text-align: left;
@@ -13,6 +14,9 @@ body {
   padding: 1em;
   float: left;
   text-align: center; }
+
+#image-text {
+  max-width: 90%; }
 
 .dropdown {
   position: relative;
@@ -121,7 +125,8 @@ img {
     z-index: 0; }
 
 #decline:hover {
-  color: red; }
+  color: red;
+  font-size: 60px; }
 
 #decline:hover .decline-content {
   display: block;
@@ -172,8 +177,7 @@ img {
     display: none; }
 
   #image-text {
-    text-align: left;
-    padding-left: 0.5em; } }
+    padding-left: 2em; } }
 @media screen and (min-width: 960px) {
   body {
     font-size: 1.2em; }
