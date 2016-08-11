@@ -6,7 +6,8 @@
 }
 
 body{
-
+	max-width: 960px;
+	margin: 0 auto;
 	font:{
 		family: 'Open Sans';
 		size: 12px;
@@ -30,6 +31,7 @@ body{
 }
 #image-text{
 	max-width: 90%;
+	padding: 1em;
 }
 .dropdown {
     position: relative;
