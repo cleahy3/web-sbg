@@ -157,7 +157,7 @@ img{
     }
     #cv-image{
     	width:40%;
-    	height:80%;
+    	min-height:80%;
     	float: left;
     	margin:5%;
     	display:inline-block;
@@ -188,4 +188,19 @@ img{
     .dropdown{
         display:none;
     }
+}
+@media screen and (min-width: 960px) {
+body{
+	h2{
+		font:{
+			size: 25px;
+		}
+	}
+	font:{
+	size:20px;
+	}
+}
+p{
+	
+}
 }
