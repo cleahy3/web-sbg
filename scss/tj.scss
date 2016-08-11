@@ -1,3 +1,10 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 body{
 	background-color: #300;
 	font:{
@@ -62,9 +69,7 @@ aside{
 }
 img{
 	width: 20%;
-    moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    @include border-radius(15px);
     border: 3px solid gold ;
     float:left;
     height:60%;
@@ -82,6 +87,22 @@ img{
     font-size: 50px;
     float:left;
     margin: 0 30px;
+    .star-content {
+    	font:{
+    	size: 12px;
+    	weight: bold;
+    	}
+    	color:gold;
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 60px;
+	    @include border-radius(10px);
+	    box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.2);
+   		padding: 12px 16px;
+   		z-index: 0;
+		
+	}
 }
 .buttons{
     font-size: 40px;
@@ -90,18 +111,40 @@ img{
 }
 #decline{
     color: white;
-    border-radius: 10px;
-    moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
     font-size: 50px;
     float:right;
     argin: 0 30px;
+    .decline-content {
+    	font:{
+    	size: 12px;
+    	weight: bold;
+    	}
+    	color:maroon;
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 60px;
+	    @include border-radius(10px);
+	    box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.2);
+   		padding: 12px 16px;
+   		z-index: 0;
+		right:0;
+	}
 }
 #decline:hover{
     color: red;
 }
+
+#decline:hover .decline-content {
+    display: block;
+    float: left;
+}
 #star:hover{
     color: gold;
+}
+#star:hover .star-content {
+    display: block;
+    float: left;
 }
 .align{
 	padding:2em;
@@ -131,15 +174,17 @@ img{
     ul{
        
         display: block;
-        background: #c5b033 ;
+        background: #927000 ;
         color: white; 
-        border-radius: 15px;
+        @include border-radius(15px);
         marin:10px;
+
+        li{
+        	display: inline-block;
+        	padding:1em;
+    	}
     }
-    li{
-        display: inline-block;
-        padding:1em;
-    }
+    
     .dropdown{
         display:none;
     }
