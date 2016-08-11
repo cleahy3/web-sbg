@@ -6,13 +6,14 @@
 }
 
 body{
-	background-color: #300;
+
 	font:{
 		family: 'Open Sans';
 		size: 12px;
 	}
-	color:gold;
+	color:#f2fffe;
 	text-align:center;
+	background-image: url("../bg.jpeg");
 }
 
 #icon{
@@ -36,6 +37,8 @@ body{
 	    position: absolute;
 	    background-color: #f9f9f9;
 	    min-width: 60px;
+	     color: #444;
+	     font-size: 0.5em;
 	    box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.2);
    		padding: 12px 16px;
    		z-index: 0;
@@ -62,7 +65,11 @@ h2{
 header{
     display:inline-block;
     margin: 0 auto;
-    font-family: 'Lora', serif;
+    
+    font:{
+    	family:'Lora', serif;
+    	size: 28px;
+    }
 }
 aside{
     display:none;
@@ -70,7 +77,7 @@ aside{
 img{
 	width: 20%;
     @include border-radius(15px);
-    border: 3px solid gold ;
+    border: 3px solid #f2fffe ;
     float:left;
     height:60%;
 }
@@ -89,7 +96,7 @@ img{
     margin: 0 30px;
     .star-content {
     	font:{
-    	size: 12px;
+    	size: 0.2em;
     	weight: bold;
     	}
     	color:gold;
@@ -105,7 +112,7 @@ img{
 	}
 }
 .buttons{
-    font-size: 40px;
+    font-size: 1.2em;
     display:inline-block;
     text-align: center;
 }
@@ -116,7 +123,7 @@ img{
     argin: 0 30px;
     .decline-content {
     	font:{
-    	size: 12px;
+    	size: 0.2em;
     	weight: bold;
     	}
     	color:maroon;
@@ -128,7 +135,7 @@ img{
 	    box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.2);
    		padding: 12px 16px;
    		z-index: 0;
-		right:0;
+		
 	}
 }
 #decline:hover{
@@ -152,14 +159,14 @@ img{
 
 @media screen and (min-width: 720px) {
     body {
-        background-color: #300;
+        
         font-size: 17px;
     }
     #cv-image{
     	width:40%;
     	min-height:80%;
     	float: left;
-    	margin:5%;
+    	margin:0;
     	display:inline-block;
     }
    
@@ -174,19 +181,24 @@ img{
     ul{
        
         display: block;
-        background: #927000 ;
-        color: white; 
+        background: #f2fffe ;
+        color: #444; 
         @include border-radius(15px);
         marin:10px;
 
         li{
         	display: inline-block;
         	padding:1em;
+        	 color: #444;
     	}
     }
     
     .dropdown{
         display:none;
+
+    }
+    #image-text{
+    	text-align: left;
     }
 }
 @media screen and (min-width: 960px) {
@@ -197,10 +209,24 @@ body{
 		}
 	}
 	font:{
-	size:20px;
+	size:1.2em;
 	}
 }
+img{
+	margin:0;
+}
+cv-image{
+	margin-right:0;
+}
 p{
-	
+	padding:0.5em;
+}
+section{
+	margin:0;
+	display:inline-block;
+	padding:0.5;
+}
+aside{
+	display:fixed;
 }
 }
