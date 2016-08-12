@@ -30,7 +30,9 @@ body{
 
 }
 #image-text{
-
+	max-height:300px;
+	
+	color: white;
 	max-width: 90%;
 	text-align: center; 
 	border-left: 1em;
@@ -106,7 +108,7 @@ img{
     	size: 0.2em;
     	weight: bold;
     	}
-    	color:gold;
+    	color:grey;
 	    display: none;
 	    position: absolute;
 	    background-color: #f9f9f9;
@@ -162,7 +164,10 @@ img{
     float: left;
 }
 
+Block{
+	
 
+}
 @media screen and (min-width: 720px) {
     body {
         
@@ -214,7 +219,7 @@ img{
 body{
 	h2{
 		font:{
-			size: 25px;
+			size: 1em;
 		}
 	}
 	font:{

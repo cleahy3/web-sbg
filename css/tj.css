@@ -18,6 +18,8 @@ body {
   text-align: center; }
 
 #image-text {
+  max-height: 300px;
+  color: white;
   max-width: 90%;
   text-align: center;
   border-left: 1em; }
@@ -89,7 +91,7 @@ img {
   #star .star-content {
     font-size: 0.2em;
     font-weight: bold;
-    color: gold;
+    color: grey;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -186,7 +188,7 @@ img {
   body {
     font-size: 1.2em; }
     body h2 {
-      font-size: 25px; }
+      font-size: 1em; }
 
   img {
     margin: 0; }
