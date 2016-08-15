@@ -1,0 +1,42 @@
+@import "../css/reset.css";
+$font:'Lora', serif;
+@mixin style-text($size) {
+    font:{
+        family: $font;
+        size: $size;
+    }
+}
+body{
+	background: #999;
+	@include style-text(2em);
+	color: orange; 
+}
+h1{
+	margin-left: 1em;
+	border-bottom: 2px solid #fff;
+	margin-bottom:2em;
+}
+h2{
+	@include style-text(0.8em);
+	padding-bottom: 0.5em;
+}
+section{
+	display:block;
+	margin-left:1em;
+}
+img{
+	position: inline-block;
+	max-width: 40%;
+	height: 20%;
+	float: left;
+	 
+}
+.text{
+	display:inline-block;
+	max-width: 40%;
+	padding:0;
+	height: 20%;
+	@include style-text(0.5em);
+	font-family: 'Open Sans';
+	float: right;
+}
