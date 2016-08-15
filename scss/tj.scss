@@ -4,17 +4,30 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
-
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@mixin regular-text($size) {
+    font:{
+        family: 'Open Sans';
+        size: $size;
+    }
+}
+@mixin spin{
+    
+    -webkit-transition-duration: 4s;
+    -moz-transition-duration: 4s;
+    -o-transition-duration: 4s;
+    transition-duration: 4s;
+}
 body{
 	max-width: 960px;
 	margin: 0 auto;
-	font:{
-		family: 'Open Sans';
-		size: 12px;
-	}
+	@include regular-text(1em);
 	color:#f2fffe;
+    background: #000;
 	text-align:center;
-	background-image: url("../bg.jpeg");
+	background-image: repeating-linear-gredient(-45deg, #222,#999);
 	background-size:cover;
 }
 
@@ -41,18 +54,19 @@ body{
     position: relative;
     display: inline-block;
     float: right;
-	.dropdown-content {
-	    display: none;
-	    position: absolute;
-	    background-color: #f9f9f9;
-	    min-width: 60px;
-	     color: #444;
-	     font-size: 0.5em;
-	    box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.2);
-   		padding: 12px 16px;
-   		z-index: 0;
-		right:0;
-	}
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: #888;
+    @include regular-text(0.7em);
+    background-color: #f9f9f9;
+    min-width: 60px;
+    box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 0;
+    right:0;
 }
 li{
     padding-top: 1em;
@@ -99,15 +113,13 @@ img{
 
 }
 #star{
+    @include spin;
 	color: white;
-    font-size: 50px;
+    font-size: 1em;
     float:left;
     margin: 0 30px;
     .star-content {
-    	font:{
-    	size: 0.2em;
-    	weight: bold;
-    	}
+    	@include regular-text(0.5em);
     	color:grey;
 	    display: none;
 	    position: absolute;
@@ -126,17 +138,16 @@ img{
     text-align: center;
 }
 #decline{
-    color: white;
-    font-size: 50px;
+    @include spin;
+    
+    font-size: 1em;
     float:right;
-    argin: 0 30px;
+    margin: 0 30px;
     .decline-content {
-    	font:{
-    	size: 0.2em;
-    	weight: bold;
-    	}
+    	@include regular-text(0.5em);
     	color:maroon;
 	    display: none;
+
 	    position: absolute;
 	    background-color: #f9f9f9;
 	    min-width: 60px;
@@ -149,15 +160,25 @@ img{
 }
 #decline:hover{
     color: red;
-    font-size: 60px;
+    font-size: 2em;
+    @include spin;
+    .decline-content{
+        font-size:0.4em;
+    }
 }
 
 #decline:hover .decline-content {
     display: block;
     float: left;
+
 }
 #star:hover{
     color: gold;
+    font-size:2em;
+    @include spin;
+    .star-content{
+        font-size:0.4em;
+    }
 }
 #star:hover .star-content {
     display: block;
@@ -223,7 +244,7 @@ body{
 		}
 	}
 	font:{
-	size:1.2em;
+	size:1em;
 	}
 }
 img{
@@ -233,7 +254,8 @@ cv-image{
 	margin-right:0;
 }
 p{
-	padding:0.5em;
+	padding:2em;
+    display:block;
 }
 section{
 	margin:0;
