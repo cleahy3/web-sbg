@@ -1,0 +1,27 @@
+####
+#####
+#####
+#####
+#####
+##############################
+"aaaaa###<jjjjj>########################
+##########"#################
+<############################q
+>###########
+###########
+############################ii#
+#######
+"##################
+
+(asdasdas sadasdasDAS)
+(ci() will allow you to change an text in parenthesis Change In Parentheses)
+to save file, use :w
+to quit :q
+to save and quit :wq
+
+(d i () will delete everything brackets)
+()
+{ci {} will change in {}}
+<ci<> will change in <>>
+"ci"" will allow you to Change In Quote"
+
