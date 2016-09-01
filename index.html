@@ -1,21 +1,133 @@
-<!DOCTYPE HTML> 
-<html>
+<!doctype HTML>
+<html lang="en">
 	<head>
-		<link rel = "stylesheet" type = "text/css" href = "css/reset.css">
-		<link rel = "stylesheet" type = "text/css" href = "css/main.css">
-		<link href='https://fonts.googleapis.com/css?family=Lora:700' rel='stylesheet' type='text/css'>
 		<meta  charset = "UTF-8">
-	</head>
-	<body>
-		<header>
-      <h1>Holiday Brochure</h1>
-  </header>
-  <section>
-			<h2> H10 Rubicon Palace - Lanzarote	</h2>
-			<img src = "rubicon.jpg">
-			<span class = "text">H10 Rubicon Palace is set in white-washed buildings around a lagoon-style pool in the Lanzarote fishing village of Playa Blanca. Overlooking La Mulata Beach, it features a spa and 10 restaurants and bars.</span>
-		</section>
+		<link rel = "stylesheet" type = "text/css" href = "css/reset.css">
+		<link rel = "stylesheet" type = "text/css" href = "css/tj.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lora:700' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, Initial-scale=1">
+		<title> Job Tinder </title>
+		<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	</head>	
+	<body 	role=document>
+		<header role="main">
+			<span id="icon">
+				<img alt="icon for the website" src="cv.jpeg">
+			</span>
+			
+			<h1 aria-level = positive integer role="header" id="title"> Job Tinder </h1>
+			<span class="dropdown">
+				<h1 aria-level = positive integer role="header" id="symbol"> &#9776; </h1>			
+				<span class="dropdown-content">
+					<nav>
+						<ul>
+							<li> Home </li>
+							<li> Your Applicants</li>
+							<li> Your Applications</li>
+							<li> Your Profile</li>
+							<li> Settings</li>
+						</ul>
+					</nav>
+				</span>				
+			</span>
+		</header>
+		<aside>
+			<nav>
+				<ul>
+					<li> Home </li>
+					<li> Your Applicants</li>
+					<li> Your Applications</li>
+					<li> Your Profile</li>
+					<li> Settings</li>
+				</ul>
+			</nav>
+		</aside>
+			<section>
+				<span aria-label="Information on candidate" class="align">
+					<img src="mycv.png" role="main" id="cv-image" alt="CV for current applicant">
+					<span id = "image-text">
+						<h2 aria-level = positive integer role="header"> Additional Information</h2>
+						<p id = 'more-info'>Additional to the information given above, I have learned a few particular languages throughout my time at university, the primary one I have used is
+						c#. I have also had quite a lot of experience using SQL, GIT, HTML, CSS , PHP , Javascript and more. Aside from my time at university I have worked as an
+						assistant manager at a paintball site, managing teams of up to 30 staff and then hundreds of customers daily. I also believe that I work well as a team
+						as every employment environment I have worked in to-date has been very team oriented, meaning that I have plenty of experience working with others. I have also worked as a sales advisor at PcWorld, advising customers on their purchases and through this I gained experience in sales, aswell as in cash handling and customer service. 
+						</p>
+					</span>
+				</span>			
+			</section>
+			<span role = "main" class ="buttons">
+				<h3 aria-level = positive integer role="header" id="star">&starf;
+					<span class="star-content"> Notify this person<br> of your interest
+					</span>
+				</h3> 	
+				<h3 id="decline">	&#9760;
+					<span class="decline-content"> Block this user <br>from reappearing on your feed 
+					</span>
+				</h3>
+				
+			</span>
+			
+
+			<script> 
+				var callum={
+					name:'Callum Leahy',
+					image:'mycv.png', 
+					paragraph:"Additional to the information given above, I have learned a few particular languages throughout my time at university, the primary one I have used is c#. I have also had quite a lot of experience using SQL, GIT, HTML, CSS , PHP , Javascript and more. Aside from my time at university I have worked as an assistant manager at a paintball site, managing teams of up to 30 staff and then hundreds of customers daily. I also believe that I work well as a team as every employment environment I have worked in to-date has been very team oriented, meaning that I have plenty of experience working with others. I have also worked as a sales advisor at PcWorld, advising customers on their purchases and through this I gained experience in sales, aswell as in cash handling and customer service. "
+				};
+				var chuck={
+					name:'Chuck Norre',
+					image:'cv2.png', 
+					paragraph:"I am a Human Resource Co-ordinator. My long-term goal is to practice as a Human Resource Manager. In order to pursue this goal, I would like to enrol in a university that emphasises putting theoretical concepts learned in the classroom into practice with a work-placement My career goals were shaped by my experience at British Airways during my break from university in the summer of 1990"
+				};
+				var terry={
+					name:'Terry Orange',
+					image:'cv3.jpg', 
+					paragraph:"Since I was a young lad, I viewed the world differently. Instead of realistic, I would picture things in their aesthetic form. For me leaves are not just greens. If you look properly, they sway delightfully following the rhythm of winds"
+				}
+				var images= [callum,chuck,terry];
+				var count = 0;
+				var imsrc = 'null'; 
+				var text = 'null';
+				var doClick = function(){
+
+						if(count === 0){
+						imsrc = callum.image;
+						text= callum.paragraph;
+						count = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+					}else if(count ===1){
+						imsrc = chuck.image;
+						text = chuck.paragraph;
+						count = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+					}else{
+						imsrc=terry.image;
+						text = terry.paragraph;
+						count = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+					}
+					
+					$('#more-info').fadeOut(500, function() {
+        				$('#more-info').html(text);
+        				$('#more-info').fadeIn(500);
+  					  });
+					$('#cv-image').fadeOut(500, function() {
+        				$('#cv-image').attr("src",imsrc);
+        				$('#cv-image').fadeIn(500);
+  					  });
+					
+				}
+				$('#star').click(function(){
+					
+					alert('This Person has been Notified!');
+					doClick();
+					});
+
+				$('#decline').click(function(){
+					
+					alert('You Won\'t See This Person Again');
+					doClick();
+				});
+
+			</script>
 	</body>
+
 </html>
-
-

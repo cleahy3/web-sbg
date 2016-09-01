@@ -1,3 +1,5 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #fff;
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -7,6 +9,7 @@
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 @mixin regular-text($size) {
     font:{
         family: 'Open Sans';
@@ -27,7 +30,7 @@ body{
 	color:#f2fffe;
     background: #000;
 	text-align:center;
-	background-image: repeating-linear-gredient(-45deg, #222,#999);
+	background-image: url("../bg.jpeg");
 	background-size:cover;
 }
 
@@ -54,7 +57,7 @@ body{
     position: relative;
     display: inline-block;
     float: right;
-}
+
 
 .dropdown-content {
     display: none;
@@ -67,6 +70,7 @@ body{
     padding: 12px 16px;
     z-index: 0;
     right:0;
+}
 }
 li{
     padding-top: 1em;
